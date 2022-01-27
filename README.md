@@ -11,6 +11,7 @@ This repository makes use of Ruby as its core programming language :
 - Navigate to project's folder/directory
   `cd OOP-School-Library`
 - Open your code editor, open the `person.rb` or `student.rb` or `teacher.rb` file and start conributing
+- Alternatively, open `main.rb` file, open a new terminal and run the command `ruby main.rb` to interact with the app
 
 ## Authors
 
