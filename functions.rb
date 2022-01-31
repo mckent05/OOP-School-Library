@@ -28,7 +28,7 @@ class Appfunction
     when '6'
       rental_for_id
     else
-      puts 'Enter a valid input between 1-7'
+      puts ' Enter a valid input between 1-7 '
     end
   end
 
