@@ -33,10 +33,6 @@ class App
     puts '6- List all rental for a given person id'
     puts '7- Exit'
   end
-
-
-
-
 end
 
 def main
