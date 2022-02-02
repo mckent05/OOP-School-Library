@@ -1,4 +1,5 @@
 require_relative 'functions'
+require 'json'
 
 class App
   def initialize
@@ -17,7 +18,7 @@ class App
 
       @appfn.actions(option)
     end
-
+    @appfn.save_operation
     puts 'Thank you for using the Library'
   end
 

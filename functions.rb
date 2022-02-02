@@ -4,12 +4,16 @@ require_relative 'classroom'
 require_relative 'rental'
 require_relative 'teacher'
 require_relative 'person'
+require_relative 'saveddata'
+require 'pry'
 
 class Appfunction
+  include RetainData
+
   def initialize
-    @rentals = []
-    @books = []
-    @people = []
+    @rentals = list_rentals
+    @books = list_books
+    @people = list_people
   end
 
   def actions(action)
@@ -63,7 +67,7 @@ class Appfunction
     name = gets.chomp
     print 'Have parent permission enter [y/n]: '
     parent_permission = gets.chomp.downcase == 'y'
-    student = Student.new(@classroom, age, name, parent_permission: parent_permission)
+    student = Student.new(classroom: @classroom, age: age, name: name, parent_permission: parent_permission)
     @people.push(student)
     puts 'Person Created Successfully'
   end
@@ -75,7 +79,7 @@ class Appfunction
     name = gets.chomp
     print 'Specialization: '
     specialization = gets.chomp
-    teacher = Teacher.new(specialization, age, name)
+    teacher = Teacher.new(specialization: specialization, age: age, name: name)
     puts 'Person Created Successfully'
     @people.push(teacher)
   end
